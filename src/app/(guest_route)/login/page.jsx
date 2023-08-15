@@ -2,15 +2,18 @@
 import Form from "@/app/components/Form/page";
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { app } from '../../firebase'
+import { useRouter } from "next/navigation"
 
 const auth = getAuth(app);
 
 const SignInForm = () => {
 
+    const router = useRouter();
+
     const verifyUser = (username, email, password) => {
         signInWithEmailAndPassword(auth, email, password)
-        .then(value => alert("Sucess"))
-        .catch(err => console.log(err))
+            .then(value => router.replace('/'))
+            .catch(err => console.log(err))
     }
 
     return (
