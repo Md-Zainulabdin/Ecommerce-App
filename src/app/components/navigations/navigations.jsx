@@ -14,7 +14,6 @@ const Nav = () => {
         onAuthStateChanged(auth, user => {
             if (user) {
                 setUser(user)
-                console.log('login in', user);
             }
             else {
                 setUser(null)
@@ -27,8 +26,8 @@ const Nav = () => {
         <div className={`w-full h-[50px] flex items-center justify-between px-[30px] py-[30px] border-b`}>
             <div className="navigations">
                 <ul className="flex items-center gap-4">
-                    <li>Home</li>
-                    <li>Product</li>
+                    <Link href={'/'}><li>Home</li></Link>
+                    <Link href={'/pages/products'}><li>Product</li></Link>
                     <li>Contact</li>
                 </ul>
             </div>

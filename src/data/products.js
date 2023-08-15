@@ -1,4 +1,4 @@
-[
+export const Products = [
     {
         "id": 1,
         "Title": "Galaxy Tab S6 Lite 10.4-inch Android Tablet 128GB.",
@@ -54,5 +54,12 @@
         "Cat": "Powerbank",
         "Price": "386",
         "Img": "/img/tp8.jpg"
-    }
+    },
+    {
+        "id": 9,
+        "Title": "Mini Portable PD 22.5W Fast Charging Powerbank.",
+        "Cat": "Powerbank",
+        "Price": "49",
+        "Img": "/img/tp5.jpg"
+    },
 ]

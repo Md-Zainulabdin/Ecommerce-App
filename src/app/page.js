@@ -8,9 +8,7 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar/>
-      <Nav/>
-      <Product/>
+      <Product />
     </div>
   )
 }

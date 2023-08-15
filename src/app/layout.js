@@ -1,7 +1,7 @@
+import ProductsContext from './Context/contextprovider'
+import Navbar from './components/navbar/page'
+import Nav from './components/navigations/navigations'
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Ecommerce App',
@@ -11,7 +11,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <ProductsContext>
+        <body>
+          <Navbar />
+          <Nav />
+          {children}
+        </body>
+      </ProductsContext>
     </html>
   )
 }
