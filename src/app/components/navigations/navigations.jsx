@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 const auth = getAuth(app);
 
+
 const Nav = () => {
 
     const [user, setUser] = useState(null)
@@ -34,6 +35,7 @@ const Nav = () => {
             <div className="auth">
                 {(user) ? <span className="px-4 py-2 border cursor-pointer" onClick={() => signOut(auth)}>Log Out</span> : <Link href={'/login'} className="px-4 py-2 border">Login</Link> }
             </div>
+            
         </div>
     )
 }

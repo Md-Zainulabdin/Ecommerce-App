@@ -2,7 +2,7 @@
 import { createContext, useContext, useState } from "react";
 
 const ContextProvider = createContext(null);
-export const useProducts = () => useContext(ContextProvider);
+export const useCustomContext = () => useContext(ContextProvider);
 
 export default function ProductsContext(props) {
 
