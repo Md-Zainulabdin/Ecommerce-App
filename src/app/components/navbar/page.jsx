@@ -2,9 +2,12 @@
 import { useState } from "react";
 import { BsFillBagHeartFill, BsFillCartCheckFill } from "react-icons/bs";
 import Link from "next/link";
+import { useCustomContext } from "@/app/Context/contextprovider";
 
 const Navbar = () => {
   const [search, setSearch] = useState("");
+
+  const {state: {cart}} = useCustomContext();
 
   return (
     <div className={`w-full h-[70px]`}>
@@ -29,7 +32,7 @@ const Navbar = () => {
           <div className="icons flex items-center gap-4">
             <BsFillBagHeartFill className="text-xl text-[--primary-black] cursor-pointer" />
             <Link href={`/pages/carts`} className="flex items-center gap-1 cursor-pointer"> 
-              <span>Cart({`0`})</span>
+              <span>Cart({cart.length})</span>
               <BsFillCartCheckFill className="text-xl text-[--primary-black] cursor-pointer" />
             </Link>
           </div>
